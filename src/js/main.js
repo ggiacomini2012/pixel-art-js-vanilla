@@ -44,15 +44,15 @@ const introLoadginCount = setInterval(() => {
 
 setTimeout(() => {
   document.body.innerHTML = `
-<img id="opening-image-one" alt="github Icon" src="/images/black-square.png">
-<img id="opening-image-two" alt="github Icon" src="/images/black-square.png">
-<img id="opening-image-three" alt="github Icon" src="/images/black-square.png">
+<img id="opening-image-one" alt="github Icon" src="./images/black-square.png">
+<img id="opening-image-two" alt="github Icon" src="./images/black-square.png">
+<img id="opening-image-three" alt="github Icon" src="./images/black-square.png">
 <header id="header">Pixel-Art</header>
 <main id="app"></main>
 <footer id="footer">
   <a href="https://github.com/ggiacomini2012" target="_blank">
     Desenvolvido por Guilherme Giacomini Teixeira
-    <img id="github-icon" alt="github Icon" src="/images/github-icon.png">
+    <img id="github-icon" alt="github Icon" src="./images/github-icon.png">
   </a>
 </footer>
 `
