@@ -1,0 +1,74 @@
+@media (min-width:1025px) {
+	#load-menu {
+		display: none;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+		width: 92%;
+    height: 85%;
+    border-radius: 40px;
+    overflow: hidden;
+    padding: 24px;
+    background-color: #3b3b3b;
+		justify-content: center;
+	}
+
+	#load-menu button {
+		height: 7%;
+    width: 29%;
+	}
+
+	#load-back-main {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#load-pixel-art {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#pixel-board-panel-load {
+		border-radius: 5px;
+    margin: 2%;
+    display: flex;
+		height: 79%;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #6f6f6f;
+	}
+
+	#no-drawing-load {
+		margin: auto;
+	}
+
+	#no-load-menu {
+		display: none;
+		flex-direction: column;
+		transform: scale(3);
+    background-color: #3f3f3f;
+    height: 19%;
+    width: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+	}
+
+	#no-load-menu * {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#no-load-selected {
+		padding: 6%;
+		text-align: center;
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+}

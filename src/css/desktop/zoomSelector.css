@@ -1,0 +1,7 @@
+@media (min-width:1025px) {
+	#zoom-selector {
+		text-align: center;
+		border-radius: 5px;
+		overflow: scroll;
+	}
+}

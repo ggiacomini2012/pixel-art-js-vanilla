@@ -1,0 +1,8 @@
+@media (min-width:961px) {
+  html * {
+    display: none;
+  }
+  #app {
+    display: none;
+  }
+}

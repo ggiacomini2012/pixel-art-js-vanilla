@@ -1,0 +1,91 @@
+@media (max-width:420px) {
+	#save-menu {
+		display: none;
+		flex-direction: column;
+		width: 76%;
+		height: 84%;
+		border-radius: 40px;
+		overflow: hidden;
+		padding: 24px;
+		background-color: #3b3b3b;
+		transition: all 10s;
+	}
+
+	#save-go-back {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#save-pixel-art {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#pixel-board-panel-save {
+		border-radius: 5px;
+		margin: 2%;
+		display: flex;
+		height: 78%;
+		flex-direction: row;
+		align-items: center;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		background-color: #6f6f6f;
+		transition: all 5s;
+	}
+
+	#no-drawing-save {
+		margin: auto;
+	}
+
+	#erase-save-menu {
+		display: none;
+	}
+
+	#erase-save-menu * {
+		display: block;
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#erase-save {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#saved-boards {
+		background-color: #ffffff;
+		transform: scale(0.6);
+	}
+
+	#saved-boards-centralizer {
+		transition: all 1s;
+		box-shadow: 1px 1px 0px 2vh #3b3b3b;
+	}
+
+	#no-save-menu {
+		flex-direction: column;
+	}
+
+	#no-save-menu * {
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	#no-save-selected {
+		padding: 24%;
+		text-align: center;
+		margin: 2%;
+		background-color: #6f6f6f;
+		border-radius: 5px;
+	}
+
+	.aqui {
+		opacity: 0.9;
+	}
+}

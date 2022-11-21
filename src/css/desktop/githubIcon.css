@@ -1,0 +1,11 @@
+@media (min-width:1025px) {
+    #github-icon {
+        width: 2.5vh;
+        margin-left: 4px;
+        border-radius: 100%;
+        padding: 2px;
+        background-color: #e60101;
+        /* transition: 1s; */
+        filter: hue-rotate(196deg);
+    }
+}
