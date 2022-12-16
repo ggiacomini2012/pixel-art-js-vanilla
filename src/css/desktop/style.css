@@ -255,8 +255,7 @@
     border-spacing: 0;
     margin: 10px;
     padding-right: 15vw;
-    transform: scale(1);
-    transform: rotate3d(1, 1, 1, 0deg);
+    transform: rotate3d(1, 1, 1, 0deg) scale(1);
     transition: all 1s;
   }
 

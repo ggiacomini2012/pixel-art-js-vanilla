@@ -37,5 +37,7 @@ export const renderApp = () => {
     f.changeZoom();
 
     f.changeScrollHorizontally();
+
+    f.fixInicialBoardSizeIssues();
   }, 3000);
 };

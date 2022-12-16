@@ -40,6 +40,7 @@ import { handleSave } from './handleSave.js';
 import { setZoomEffect } from './setZoomEffect.js';
 import { changeBoardSize } from './changeBoardSize.js';
 import { renderApp } from './renderApp.js';
+import { fixInicialBoardSizeIssues } from './fixInicialBoardSizeIssues.js';
 import { template } from './template.js';
 
 export default {
@@ -85,5 +86,6 @@ export default {
   changeZoom,
   changeScrollHorizontally,
   renderApp,
+  fixInicialBoardSizeIssues,
   template,
 };
