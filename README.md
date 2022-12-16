@@ -1,6 +1,6 @@
 
 - Check running project at:
-WIP - https: //js-v- pixel-art. netlify. app/
+https://js-v-pixel-art.netlify.app/
 ---
 - how to download, install and run on your computer:
   * in your terminal run: 
