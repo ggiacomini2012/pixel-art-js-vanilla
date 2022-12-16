@@ -3,7 +3,7 @@ import f from '.';
 export const zoomListener = () => {
   const zoomKeyDown = (event) => {
     let zoomValue = f.selectById('zoom-selector').value;
-    if (event.key === 'z') {
+    if (event.key.toLocaleLowerCase() === 'z') {
       f.selectById('zoom-selector').value = eval(`${zoomValue}+ 1`);
       zoomValue = f.selectById('zoom-selector').value;
       Array.from(document.getElementsByClassName('pixel')).map((element) => {
@@ -11,7 +11,7 @@ export const zoomListener = () => {
         element.style.width = `${zoomValue}px`;
       });
     }
-    if (event.key === 'x' && +zoomValue > 1) {
+    if (event.key.toLocaleLowerCase() === 'x' && +zoomValue > 1) {
       f.selectById('zoom-selector').value = eval(`${zoomValue}- 1`);
       zoomValue = f.selectById('zoom-selector').value;
       Array.from(document.getElementsByClassName('pixel')).map((element) => {

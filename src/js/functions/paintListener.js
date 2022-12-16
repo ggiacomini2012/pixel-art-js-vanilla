@@ -7,18 +7,18 @@ export const paintListener = () => {
   let keyDownE = false;
 
   const switcherKeyDKeyE = (event) => {
-    if (event.type === 'keydown' && event.key === 'd') {
+    if (event.type === 'keydown' && event.key.toLocaleLowerCase() === 'd') {
       keyDownD = true;
       f.selectById('copy-color-from-board').classList.remove('shine');
       f.selectById('copy-color-from-board').style.background = green;
     }
-    if (event.type === 'keyup' && event.key === 'd') keyDownD = false;
-    if (event.type === 'keydown' && event.key === 'e') {
+    if (event.type === 'keyup' && event.key.toLocaleLowerCase() === 'd') keyDownD = false;
+    if (event.type === 'keydown' && event.key.toLocaleLowerCase() === 'e') {
       keyDownE = true;
       f.selectById('copy-color-from-board').classList.remove('shine');
       f.selectById('copy-color-from-board').style.background = green;
     }
-    if (event.type === 'keyup' && event.key === 'e') keyDownE = false;
+    if (event.type === 'keyup' && event.key.toLocaleLowerCase() === 'e') keyDownE = false;
   };
   document.addEventListener('keydown', switcherKeyDKeyE);
   document.addEventListener('keyup', switcherKeyDKeyE);

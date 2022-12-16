@@ -24,7 +24,7 @@ export const grid = () => {
   f.selectById('grid').addEventListener('click', toggleGridOnClick);
 
   const toggleGridOnKeyG = (event) => {
-    const checkKeyDown = event.key === 'g';
+    const checkKeyDown = event.key.toLocaleLowerCase() === 'g';
     const checkPixelShadow = document.getElementsByClassName('pixel')[0].style.boxShadow === 'none';
     if (checkKeyDown && checkPixelShadow) {
       Array.from(document.getElementsByClassName('pixel')).map((element) => {

@@ -45,7 +45,7 @@ export const downloadSVG = () => {
   f.selectById('download-drawing-in-svg').addEventListener('click', activateDownloadByClick);
 
   const activateDownloadByKeydown = (event) => {
-    if (event.key === 'p') {
+    if (event.key.toLocaleLowerCase() === 'p') {
       pixelBoardToSVG();
       prepareLinkForDownload();
     }

@@ -2,7 +2,7 @@ import f from '.';
 
 export const changeScrollHorizontally = () => {
   const change = (event) => {
-    if (event.key === 'a') {
+    if (event.key.toLocaleLowerCase() === 'a') {
       let count = 0;
       const scrollLeft = setInterval(() => {
         count++;
@@ -11,7 +11,7 @@ export const changeScrollHorizontally = () => {
       }, 3);
       count = 0;
     }
-    if (event.key === 's') {
+    if (event.key.toLocaleLowerCase() === 's') {
       let count = 0;
       const scrollRight = setInterval(() => {
         count++;

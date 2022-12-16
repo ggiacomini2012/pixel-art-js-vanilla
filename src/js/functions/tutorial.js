@@ -17,7 +17,7 @@ export const tutorial = () => {
   };
   const toggleTutorial = (event) => {
     const tutorialIsUP = f.selectById('hide-tutorial').innerHTML === '?';
-    const checkKeyDown = (event.key === 't');
+    const checkKeyDown = (event.key.toLocaleLowerCase() === 't');
     if (checkKeyDown && !tutorialIsUP) {
       hideTutorial();
     }

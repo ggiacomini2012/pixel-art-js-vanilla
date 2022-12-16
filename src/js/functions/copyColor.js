@@ -5,11 +5,11 @@ export const copyColor = () => {
   const green = 'rgba(127, 255, 212, 0.37)';
   const copyColorEventKeyC = (event) => {
     const copyColorActivated = f.selectById('copy-color-from-board').style.background == red;
-    if (event.key === 'c' && copyColorActivated) {
+    if (event.key.toLocaleLowerCase() === 'c' && copyColorActivated) {
       f.selectById('copy-color-from-board').classList.remove('shine');
       f.selectById('copy-color-from-board').style.background = green;
     }
-    if (event.key === 'c' && !copyColorActivated) {
+    if (event.key.toLocaleLowerCase() === 'c' && !copyColorActivated) {
       f.selectById('copy-color-from-board').classList.add('shine');
       f.selectById('copy-color-from-board').style.background = red;
     }

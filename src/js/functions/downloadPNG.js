@@ -51,7 +51,7 @@ export const downloadPNG = () => {
   f.selectById('download-drawing-in-png').addEventListener('click', activateDownloadByClick);
 
   const activateDownloadByKeydown = (event) => {
-    if (event.key === 'o') {
+    if (event.key.toLocaleLowerCase() === 'o') {
       pixelBoardToPNG();
       prepareLinkForDownload();
     }
