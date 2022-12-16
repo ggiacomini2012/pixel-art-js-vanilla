@@ -9,7 +9,7 @@ export const bodyContent = () => {
     <main id="app" class="app"></main>
     <footer id="footer">
       <a href="https://github.com/ggiacomini2012" target="_blank">
-        Desenvolvido por Guilherme Giacomini Teixeira
+        Developed by Guilherme Giacomini Teixeira
         <img id="github-icon" alt="github Icon" src="./images/github-icon.png">
       </a>
     </footer>
