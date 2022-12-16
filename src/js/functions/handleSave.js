@@ -45,6 +45,13 @@ export const handleSave = () => {
   f.selectById('save-go-back').addEventListener('click', backToMain);
 
   const savePixelArt = () => {
+    const panelSize = +f.selectById('pixel-board-panel').offsetWidth + +f.selectById('pixel-board-panel').offsetHeight;
+    const boardSize = (panelSize / 680) / (+f.selectById('board-size-selector').value / 200);
+    Array.from(document.getElementsByClassName('pixel')).map((element) => {
+      element.style.height = `${boardSize}px`;
+      element.style.width = `${boardSize}px`;
+    });
+    f.selectById('zoom-selector').value = (boardSize).toFixed(0);
     const pixelArtSaveMemory = f.storage('pixelboard').getItem() || [];
     const regexPixelBoard = new RegExp(/pixel-board/, 'gi');
     const regexPixelClass = new RegExp(/class="pixel"/, 'gi');
