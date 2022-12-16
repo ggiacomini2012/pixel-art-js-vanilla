@@ -1,3 +1,3 @@
-export const template = () => {
-    return 0
-}
+import f from '.';
+
+export const template = () => f.template();

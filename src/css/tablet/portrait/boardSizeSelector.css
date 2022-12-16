@@ -1,8 +1,0 @@
-@media (min-width:641px) AND (max-width:960px) {
-	#board-size-selector {
-		text-align: center;
-		border-radius: 5px;
-		margin-left: 3px;
-		overflow: scroll;
-	}
-}

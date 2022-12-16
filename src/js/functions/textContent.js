@@ -1,3 +1,1 @@
-export const textContent = (element, text) => {
-  return document.getElementById(element).textContent = text;
-}
+export const textContent = (element, text) => document.getElementById(element).textContent = text;

@@ -1,7 +1,6 @@
-import f from "."
+import f from '.';
 
-export const desktopConfig = (payload = 0) => {
-    if(f.watchZoom().data.screenWidth > 1025) {
-        return payload
-      }
-}
+export const desktopConfig = () => {
+  f.selectById('board-size-selector').setAttribute('max', 100);
+  f.tutorial();
+};

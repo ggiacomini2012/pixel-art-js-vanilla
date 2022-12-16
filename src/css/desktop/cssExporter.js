@@ -1,9 +1,1 @@
-import './root.css'
-import './style.css'
-import './boardSizeSelector.css'
-import './zoomSelector.css'
-import './pencilColor.css'
-import './debbug.css'
-import './githubIcon.css'
-import './save.css'
-import './load.css'
+import './style.css';

@@ -1,4 +1,4 @@
-@media (max-aspect-ratio: 13/9) AND (pointer: coarse) {
+@media (min-aspect-ratio: 13/9) AND (pointer: coarse) {
   :root {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 62.5%;
@@ -17,8 +17,8 @@
   }
 
   ::-webkit-scrollbar {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -47,6 +47,7 @@
     place-items: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -59,19 +60,18 @@
     flex-direction: column;
     align-items: center;
     color: #000000;
-    transition: all 1.6s ease;
+    transition: all 2s ease;
     position: absolute;
     font-size: 1.8rem;
     width: 50%;
     height: 20%;
     top: 30vh;
-    left: 25vw;
+    left: 26vw;
     justify-content: center;
   }
 
   #loading,
   #loading-count {
-    color: #000000;
     transition: all 1.9s ease;
   }
 
@@ -82,8 +82,6 @@
     height: 110%;
     left: 46%;
     transition: all 3s ease-in-out;
-    margin: 0;
-    border: none;
   }
 
   #opening-image-two {
@@ -93,8 +91,6 @@
     height: 110%;
     left: -46%;
     transition: all 3s ease-in-out;
-    margin: 0;
-    border: none;
   }
 
   #opening-image-three {
@@ -162,8 +158,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     align-items: center;
     transition: all 1s;
@@ -191,45 +186,36 @@
   }
 
   #hide-control-panel {
-    color: whitesmoke;
-    height: 2.5%;
-    width: 80%;
-    font-size: 10px;
-    right: 11px;
-    top: 11px;
-    background-color: #3b3b3b;
-    border-radius: 16px;
-    box-shadow: inset 0px 0px 6px 1px #00000082;
-    padding: 0px;
-    margin: 4px;
-    margin-top: 7px;
+    display: none;
+  }
+
+
+  @media (max-height: 300) {
+    #control-panel {
+      transform: scale(0);
+    }
   }
 
   #control-panel {
-    background-color: #3b3b3b;
+    background-color: rgb(59, 59, 59);
     border-radius: 20px;
-    padding: 16px 7%;
     display: flex;
-    height: 24%;
-    width: 80%;
-    margin: 4px;
-    margin-top: 7px;
-    min-height: 87px;
-    max-height: 12vh;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-around;
+    height: 96%;
+    width: 40%;
+    margin: 0 4%;
+    flex-flow: row wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-evenly;
   }
 
   #pixel-board-panel {
-    margin-top: 0.4vh;
     background-color: #3b3b3b;
     border-radius: 20px;
     display: flex;
-    height: 58vh;
-    width: 94%;
+    height: 97%;
+    width: 50%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -241,24 +227,22 @@
     border-radius: 5px;
     background: #3f3f3f;
     color: whitesmoke;
-    height: 15%;
-    width: 31%;
-    min-height: 10%;
-    font-size: 1.3vh;
+    height: 3%;
+    width: 86%;
+    font-size: 1.4vw;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 1px 1px 20px #222222, 1px 1px 0 3px #222222;
-    margin: 8px;
+    box-shadow: inset 1px 1px 20px #222222, inset 0px 0px 2px 0px #ffffff, 1px 1px 0 3px #222222;
+    padding: 1.5%;
   }
 
   #control-panel button {
+    padding: 2%;
     background: #3f3f3f;
     color: whitesmoke;
-    height: 11%;
-    width: 22%;
-    min-width: 68px;
-    max-width: 14%;
-    font-size: 1.4vh;
+    height: 2%;
+    width: 89%;
+    font-size: 1.4vw;
     box-shadow: 1px 1px 0 3px #222222;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -268,8 +252,8 @@
     touch-action: pinch-zoom;
     display: flex;
     box-shadow: none;
-    width: 92%;
-    height: 96%;
+    width: 100%;
+    height: 100%;
   }
 
   #pixel-board-centralizer {
@@ -278,8 +262,9 @@
   }
 
   #pixel-board-table {
-    filter: drop-shadow(1px 22px 13px black);
+    filter: drop-shadow(1px 15px 13px black);
     border-spacing: 0;
+    margin: auto;
     transform: rotate3d(1, 1, 1, 0deg) scale(0.9);
     transition: all 1s;
   }
@@ -293,57 +278,74 @@
   .pixel {
     background-color: #fff;
     box-shadow: inset 0px 0px 0 0.3px #0000007c;
-    width: 15px;
-    height: 15px;
+    width: 2vw;
+    height: 2vw;
     border-spacing: 0;
   }
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
-    padding: 2%;
-    width: 30%;
-    height: 30%;
-    font-size: 7px;
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   input[type=number] {
+    -moz-appearance: textfield;
     padding: 2%;
-    width: 19%;
-    height: 30%;
-    font-size: 7px;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 24%;
+    height: 10%;
+    font-size: 1.4vw;
+    transition: all 0.1s;
+  }
+
+  input[type=number]:focus {
+    padding-left: 1%;
+    position: absolute;
+    left: 2%;
+    top: -1%;
+    font-size: 39px;
+    border: none;
+    box-shadow: inset #222222 0px 1px 20px 20px, inset #222222 0px 1px 11px 7px, #222222 1px 1px 0px 20px;
+    width: 39%;
+    height: 29%;
+    border-bottom: solid #222222 50vh;
+    border-top: solid #222222 11vh;
+    z-index: 15;
   }
 
   .download-drawing-in-svg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #3f3f3f;
+    background: #575757;
+    word-wrap: break-word;
+    line-height: 3vh;
+    width: 12vh;
+    height: 9vh;
     position: absolute;
     z-index: 25;
-    bottom: 2%;
-    right: 6vw;
-    height: 5vh;
+    bottom: 25%;
+    right: 3vw;
     border-radius: 2vh;
-    padding: 0 2vh;
-    font-size: 1.4vh;
+    padding: 1vh;
+    font-size: 2.4vh;
     box-shadow: 1px 1px 0 2px #000000, inset 1px 2px 0px 0px #717171;
     color: whitesmoke;
     transition: all 1s ease-in-out;
   }
 
   .download-drawing-in-png {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #3f3f3f;
+    background: #575757;
+    word-wrap: break-word;
+    line-height: 3vh;
+    width: 12vh;
+    height: 9vh;
     position: absolute;
     z-index: 25;
-    bottom: 2%;
-    right: 52vw;
-    height: 5vh;
+    bottom: 4%;
+    right: 3vw;
     border-radius: 2vh;
-    padding: 0 2vh;
-    font-size: 1.4vh;
+    padding: 1vh;
+    font-size: 2.4vh;
     box-shadow: 1px 1px 0 2px #000000, inset 1px 2px 0px 0px #717171;
     color: whitesmoke;
     transition: all 1s ease-in-out;
@@ -351,8 +353,8 @@
 
   #board-size-selector {
     text-align: center;
-    border-radius: 5px;
-    margin-left: 3px;
+    border-radius: 14px;
+    margin-left: 10px;
     overflow: scroll;
   }
 
@@ -414,32 +416,46 @@
     transform: scale(0);
     position: absolute;
     transition: all 1s;
-    flex-direction: column;
-    width: 76%;
-    height: 84%;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    width: 92%;
+    height: 83%;
     border-radius: 40px;
     overflow: hidden;
-    padding: 24px;
+    padding: 2%;
     background-color: #3b3b3b;
+    justify-content: center;
+  }
+
+  #load-menu * {
+    color: whitesmoke;
+    font-size: 1.5vw;
+  }
+
+  #load-menu button {
+    background-color: #3b3b3b;
+    height: 12%;
+    width: 29%;
   }
 
   #load-back-main {
-    margin: 2%;
+    margin: 1%;
     background-color: #6f6f6f;
     border-radius: 10px;
   }
 
   #load-pixel-art {
-    margin: 2%;
+    margin: 1%;
     background-color: #6f6f6f;
     border-radius: 10px;
   }
 
   #pixel-board-panel-load {
     border-radius: 10px;
-    margin: 2%;
+    margin: 1%;
     display: flex;
-    height: 78%;
+    height: 80%;
+    width: 95%;
     flex-direction: row;
     align-items: center;
     overflow-x: scroll;
@@ -454,16 +470,24 @@
   #no-load-menu {
     display: none;
     flex-direction: column;
+    transform: scale(1.5);
+    background-color: #3f3f3f;
+    height: 40%;
+    width: 32%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
   }
 
   #no-load-menu * {
     margin: 2%;
-    background-color: #6f6f6f;
+    background-color: #3b3b3b;
+    color: whitesmoke;
     border-radius: 10px;
   }
 
   #no-load-selected {
-    padding: 24%;
+    padding: 6%;
     text-align: center;
     margin: 2%;
     background-color: #6f6f6f;
@@ -483,21 +507,24 @@
 
   #pencil-color-selector-container {
     overflow: hidden;
-    width: 23px;
-    height: 11px;
+    width: 4.4vw;
+    height: 1.5vh;
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3px;
+    padding: 0px;
+    margin-left: 10px;
+    box-shadow: inset 1px 1px 4px 0px white, 1px 1px 6px 2px black;
   }
 
   input[type="color"] {
-    padding: 0;
-    width: 50vw;
-    height: 50vh;
+    width: 4.6vw;
+    height: 2.24vw;
+    border-radius: 100px;
     margin: -25%;
-    border: solid 0px black;
+    box-shadow: inset 1px 1px 19px 10px black;
   }
 
   #copy-color-from-board {
@@ -507,23 +534,25 @@
   }
 
   #saved-color {
-    width: calc(45vw + 21vh);
-    height: calc(3vh + 0.5vw);
-    margin: 1% 8%;
+    width: 90%;
+    height: 26%;
   }
 
   .color-line {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .color {
-    box-shadow: inset 0px 0px 4px 0px white, 1px 1px 6px 2px black;
-    margin: 0.4%;
-    width: calc(2.5vw + 1vh);
-    height: calc(2vh + 0.5vw);
+    border-radius: 100px;
+    box-shadow: inset 1px 1px 4px 0px white, 1px 1px 6px 2px black;
+    margin: 1%;
+    width: 5vw;
+    height: 4.3vh;
   }
+
 
   .shine {
     box-shadow: 0px 0px 6px 1px #be08f2, 1px -1px 0 3px #222222, inset 0px 0px 11px 0px #0300ff;
@@ -554,35 +583,48 @@
 
   #save-menu {
     display: flex;
-    flex-direction: column;
-    width: 76%;
-    height: 84%;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    width: 92%;
+    height: 83%;
     border-radius: 40px;
     overflow: hidden;
-    padding: 24px;
+    padding: 2%;
     background-color: #3b3b3b;
+    justify-content: center;
     transform: scale(0);
     position: absolute;
     transition: all 1s;
   }
 
+  #save-menu * {
+    color: whitesmoke;
+    font-size: 1.5vw;
+  }
+
+  #save-menu button {
+    height: 12%;
+    width: 29%;
+  }
+
   #save-go-back {
-    margin: 2%;
-    background-color: #6f6f6f;
+    margin: 1%;
+    background-color: #3b3b3b;
     border-radius: 10px;
   }
 
   #save-pixel-art {
-    margin: 2%;
-    background-color: #6f6f6f;
+    margin: 1%;
+    background-color: #3b3b3b;
     border-radius: 10px;
   }
 
   #pixel-board-panel-save {
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 2%;
     display: flex;
-    height: 78%;
+    height: 80%;
+    width: 95%;
     flex-direction: row;
     align-items: center;
     overflow-x: scroll;
@@ -594,34 +636,34 @@
     margin: auto;
   }
 
+  #erase-save-menu * {
+    display: block;
+    margin: 2%;
+    background-color: #6f6f6f;
+    border-radius: 5px;
+  }
+
   #erase-save-menu {
     display: none;
     transform: scale(1.5);
     background-color: #3f3f3f;
-    height: 10%;
-    width: 40%;
+    height: 19%;
+    width: 20%;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 10px;
   }
 
-  #erase-save-menu * {
-    display: block;
-    margin: 2%;
-    background-color: #6f6f6f;
-    border-radius: 10px;
-  }
-
   #erase-save {
-    margin: 2%;
-    background-color: #6f6f6f;
+    margin: 1%;
+    background-color: #3b3b3b;
     border-radius: 10px;
   }
 
   #saved-boards {
     background-color: #ffffff;
-    transform: scale(0.6);
-    filter: drop-shadow(1px 22px 13px black);
+    transform: scale(0.4);
+    filter: drop-shadow(1px 15px 13px black);
   }
 
   #saved-boards-centralizer {
@@ -631,21 +673,26 @@
 
   #no-save-menu {
     display: none;
+    background-color: #3b3b3b;
+    border-radius: 10px;
     flex-direction: column;
+    transform: scale(1.5);
   }
 
   #no-save-menu * {
+    color: whitesmoke;
     margin: 2%;
-    background-color: #6f6f6f;
-    border-radius: 10px;
+    background-color: #3b3b3b;
+    border-radius: 5px;
   }
 
   #no-save-selected {
-    padding: 24%;
     text-align: center;
-    margin: 2%;
+    padding: 1%;
+    margin: 4%;
     background-color: #6f6f6f;
-    border-radius: 10px;
+    border-radius: 8px;
+    color: whitesmoke;
   }
 
   #tutorial {

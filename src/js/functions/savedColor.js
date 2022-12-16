@@ -1,7 +1,7 @@
-import f from "."
+import f from '.';
 
-let tableCreator = (number = 5) => Array.from({ length: number }, (x, i) => i);
-let pallet = [
+const tableCreator = (number = 5) => Array.from({ length: number }, (_x, i) => i);
+const pallet = [
   '#000000',
   '#ffff00',
   '#48ff00',
@@ -22,28 +22,22 @@ export const savedColor = () => {
   f.innerHTML('saved-color', `
     <div id="saved-color-centralizer">
       <table id="saved-color-table">
-        ${ tableCreator(1).map((e) => {
-            return `
+        ${tableCreator(1).map(() => `
             <tr class="color-line">
-                ${ tableCreator(14).map((e) => {
-                    return `<th class="color"></th>` 
-                }).join('')}
+                ${tableCreator(14).map(() => '<th class="color"></th>').join('')}
             </tr>
-            ` 
-        }).join('')}
+            `).join('')}
       </table>
     </div>
-  `)
-  // f.selectById('zoom-selector').value = pixelSize;
+  `);
   Array.from(document.getElementsByClassName('color')).map((element, index) => {
     const green = 'rgba(127, 255, 212, 0.37)';
-    // element.style.height = `${4}vw`;
-    // element.style.width = `${4}vw`;
     element.style.backgroundColor = pallet[index];
-    element.onclick = () => {
+    const selectColor = () => {
       f.selectById('pencil-color-selector').value = pallet[index];
-      f.selectById('copy-color-from-board').style.backgroundColor =  green;
-      f.paintListener(f.restoreKeys, pallet[index]);
-    }
-  })
-}
+      f.selectById('copy-color-from-board').style.backgroundColor = green;
+      f.selectById('copy-color-from-board').classList.remove('shine');
+    };
+    element.addEventListener('click', selectColor);
+  });
+};

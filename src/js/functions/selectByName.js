@@ -1,3 +1,1 @@
-export const selectByName = (element) => {
-    return Array.from(document.getElementsByName(element));
-}
+export const selectByName = (element) => Array.from(document.getElementsByName(element));

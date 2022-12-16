@@ -1,3 +1,1 @@
-export const selectById = (element) => {
-  return document.getElementById(element)
-}
+export const selectById = (element) => document.getElementById(element);
